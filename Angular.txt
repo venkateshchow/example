@@ -1,0 +1,31 @@
+What are the differences between AngularJS (angular 1.x) and Angular (Angular 2.x and beyond)?
+In Angular 1.X, we have a very simple controller and a directive
+In Angular2, we have a component that encapsulates both a directive and a controller’s capability to expose variables to templates. A component is defined as a class with a @component decorator.
+Angular 1.X used ng-bind directive to bind a property to a value. In Angular 2, this is done by placing the [property] attribute in a tag.
+The ng-model directive used in Angular 1.X is replaced by the [(ngModel)] directive in Angular 2.
+2)What is a component? Why would you use it?
+In AngularJS, a Component is a special kind of directive that uses a simpler configuration which is suitable for a component-based application structure. ... simpler configuration than plain directives.
+
+3)What is the minimum definition of a component?
+Component decorator allows you to mark a class as an Angular component and provide additional metadata that determines how the component should be processed, instantiated and used at runtime
+
+4)What is a module, and what does it contain?
+In Angular, a module is a mechanism to group components, directives, pipes and services that are related, in such a way that can be combined with other modules to create an application. An Angular application can be thought of as a puzzle where each piece (or each module) is needed to be able to see the full picture
+
+5)What is a service, and when will you use it?
+AngularJS services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app. AngularJS services are: Lazily instantiated – AngularJS only instantiates a service when an application component depends on it.
+
+6)What is a promise? Explain it laymen's terms.
+An AngularJS promise is a mechanism that lets you defer a stated action or series of actions at an earlier point of time until you explicitly declare that promise to be fulfilled (or resolved). Promises are useful for asynchronous operations. This video introduces the basic way to declare and resolve promises.
+
+7)What are the lifecycle hooks for components and directives?
+Directive and component instances have a lifecycle as Angular creates, updates, and destroys them. Developers can tap into key moments in that lifecycle by implementing one or more of the lifecycle hook interfaces in the Angular core library.
+
+Each interface has a single hook method whose name is the interface name prefixed with ng. For example, the OnInit interface has a hook method named ngOnInit() that Angular calls shortly after creating the component
+
+8)What are pipes? Give me an example.
+Angular 1.x. In Angular 1 we had filter which helped format or transform how data was displayed in our templates. In Angular 2.x and later we have a very similar feature but renamed to Pipes.
+
+9)What are the differences between reactive forms and template driven forms?
+Template driven form is something when we write logic, validation , controls everything in the template part I mean in html code. The template is responsible for setting up the form, the validations etc
+Reactive forms all the logic validation part in the controller side I mean in typescript file/class. For the reactive approach you are doing all that in code in the component. A far less noisy approach
